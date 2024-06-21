@@ -52,7 +52,7 @@ function ahorcado(){
 
 
 
-    
+    //Gets all indexes where the letter appears
     function getCorrectIndexs(letter){
         let indexs = [];
 
@@ -65,15 +65,18 @@ function ahorcado(){
         return indexs;
     }
 
+
+    //Checks if the letter is in the solution, then adds either a hit or a miss depending on the result
     function guess(){
         let letter = prompt("Type a letter.").toUpperCase();
         console.log ("Trying to guess the letter " + letter);
 
         
 
+        
         if (currentWord.includes(letter)){
             console.log("ERROR: DUPLICATE LETTER");
-            infoBox.textContent = "Letra ya ingresada";
+            infoBox.textContent = "Letter already used";
             return;
         }
 
@@ -87,7 +90,7 @@ function ahorcado(){
 
 
                 indexs.forEach(index =>{
-                    currentWord[index] = letter;
+                    currentWord[index] = letter;    //Updates the player array to add the correct letters
                 })
 
                 drawCurrentWord();
@@ -117,7 +120,7 @@ function ahorcado(){
 
     function checkGameState(){
         if (misses > 5){
-            infoBox.textContent = "PERDISTE PUTA";
+            infoBox.textContent = "Game Over";
         }
     }
 
