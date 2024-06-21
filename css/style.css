@@ -1,0 +1,58 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+    /* background-color: rgb(71, 153, 51); */
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.ui{
+    /* background-color: aquamarine; */
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#render{
+    transition: 0.2s;
+}
+
+.blurred{
+    filter: blur(5px); 
+    transform: scale(1.1);
+}
+
+.pulse{
+    transform: scaleY(1.3);
+}
+
+#currentWord{
+    font-size: 6em;
+    letter-spacing: 0.2em;
+    transition: 0.1s ease-in;
+}
+
+#guessButton{
+    border: 2px solid rgb(132, 184, 212);
+    background-color: rgb(99, 207, 237);
+    border-radius: 15px;
+    width: 25%;
+    height: 25%;
+    font-size: 2em;
+    transition: 0.2s;
+}
+
+#guessButton:hover{
+    /* opacity: 0.5; */
+    background-color: rgb(13, 156, 245);
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+
